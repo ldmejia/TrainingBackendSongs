@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func SearchFromChartLyrics(artist, song string) ([]models.Song, error) {
+func SearchChart(artist, song string) ([]models.Song, error) {
 	baseURL := "http://api.chartlyrics.com/apiv1.asmx/SearchLyric"
 	params := url.Values{}
 	params.Set("artist", artist)
