@@ -3,14 +3,14 @@ package models
 import "encoding/xml"
 
 type ChartLyricsSearchResponse struct {
-	XMLNAME xml.Name `xml:"ArrayOfSearchLyricResult"`
-	Results []ChartLyricsSearchResult `xml:"SearchLyric"`
+	XMLName xml.Name                   `xml:"ArrayOfSearchLyricResult"`
+	Results []ChartLyricsSearchResult `xml:"SearchLyricResult"`
 }
 
 type ChartLyricsSearchResult struct {
-	SongID string `xml:"TrackId"`
-	Artist string `xml:"Artist"`
-	Song string `xml:"Song"`
-	Album string `xml:"Album"`
+	TrackId string `xml:"TrackId"`
+	Artist  string `xml:"Artist"`
+	Song    string `xml:"Song"`
+	Album   string `xml:"Album,omitempty"` 
 }
 
